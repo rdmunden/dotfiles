@@ -1,0 +1,28 @@
+# option+left
+# optionally use shell-backward-word for different word boundaries
+"\e\e[D": backward-word
+# option+right
+"\e\e[C": forward-word
+
+# sh+opt+left
+"\e[1;10D": unix-word-rubout
+# sh+opt+right
+"\e[1;10C": kill-word
+
+"\C-f": forward-search-history
+
+#
+"\C-p": non-incremental-reverse-search-history-again
+"\C-n": non-incremental-forward-search-history-again
+#
+"\e\C-p": history-search-backward
+"\e\C-n": history-search-forward
+
+"\C-x\C-y": alias-expand-line
+#these next two are the default values
+#"\e\C-e": shell-expand-line
+#"\e^": history-expand-line
+
+"\e[Z": menu-complete
+set show-all-if-ambiguous on
+
